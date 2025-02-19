@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI 7.0 - Futuristik Web</title>
+    <style>
+      /* Font & Tema Dasar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header & Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+/* Tombol Menu Mobile */
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Tombol Mode Gelap/Terang */
+#toggle-theme {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1e1e1e, #333);
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 15px;
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color
+    </style>
+</head>
+<body>
+    <header>
+        <h1>UI 7.0</h1>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Layanan</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+        <button id="toggle-theme">🌙</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Selamat Datang di UI 7.0</h2>
+            <p>Desain futuristik dengan tampilan modern dan minimalis.</p>
+            <a href="#" class="btn">Mulai Sekarang</a>
+        </section>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Kecepatan</h3>
+                <p>Optimasi untuk performa terbaik di web.</p>
+            </div>
+            <div class="card">
+                <h3>Responsif</h3>
+                <p>Tampilan menyesuaikan perangkat pengguna.</p>
+            </div>
+            <div class="card">
+                <h3>Interaktif</h3>
+                <p>UI yang dinamis dengan animasi elegan.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 UI 7.0. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      // Toggle Mode Gelap/Terang
+const toggleTheme = document.getElementById('toggle-theme');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggleTheme.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+
+    if (document.body.classList.contains('light-mode')) {
+        document.body.style.backgroundColor = "#ffffff";
+        document.body.style.color = "#000000";
+        toggleTheme.textContent = "☀️";
+    } else {
+        document.body.style.backgroundColor = "#121212";
+        document.body.style.color = "#ffffff";
+        toggleTheme.textContent = "🌙";
+    }
+});
+
+// Toggle Menu di Mobile
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+    </script>
+</body>
+</html>
